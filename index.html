@@ -2,41 +2,95 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KunalTheDev Apps - Privacy Policies</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KunalTheDev Apps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+:root{--a:#6d28d9;--b:#2563eb;--glass:rgba(255,255,255,.12)}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{color:#fff;overflow-x:hidden;background:linear-gradient(-45deg,#4f46e5,#6d28d9,#2563eb,#9333ea);background-size:400% 400%;animation:bg 15s ease infinite}
-@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
-.blob{position:fixed;border-radius:50%;filter:blur(80px);opacity:.3;z-index:-1;animation:float 12s ease-in-out infinite}
-.b1{width:300px;height:300px;background:#ff00cc;left:-80px;top:-80px}.b2{width:380px;height:380px;background:#00d4ff;right:-100px;bottom:-100px}
-@keyframes float{50%{transform:translate(30px,-40px)}}
-header{text-align:center;padding:90px 20px}
-header h1{font-size:3.5rem}header p{opacity:.9;margin-top:10px}
-.container{max-width:1200px;margin:auto;padding:40px 20px}
-h2{text-align:center;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
-.card{background:rgba(255,255,255,.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.15);border-radius:22px;padding:30px;transition:.4s;position:relative;overflow:hidden}
-.card:hover{transform:translateY(-10px) scale(1.03)}
-.card:before{content:"";position:absolute;top:-120%;left:-50%;width:50%;height:250%;background:rgba(255,255,255,.25);transform:rotate(25deg);transition:.8s}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;color:#fff;background:linear-gradient(-45deg,#4f46e5,#6d28d9,#2563eb,#9333ea);background-size:400% 400%;animation:bg 14s ease infinite}
+@keyframes bg{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+.bg,.bg:before,.bg:after{content:"";position:fixed;border-radius:50%;filter:blur(90px);z-index:-2;animation:f 14s ease-in-out infinite}
+.bg{width:340px;height:340px;background:#ff00cc;left:-120px;top:-100px}
+.bg:before{width:420px;height:420px;background:#00d4ff;right:-55vw;bottom:-20vh}
+.bg:after{width:260px;height:260px;background:#ffd000;left:45vw;top:45vh}
+@keyframes f{50%{transform:translate(40px,-40px) scale(1.1)}}
+header{min-height:70vh;display:grid;place-items:center;text-align:center;padding:30px}
+h1{font-size:clamp(2.6rem,7vw,4.8rem)}
+.lead{max-width:700px;opacity:.9;margin:18px auto}
+.hero-btn{display:inline-block;margin-top:24px;padding:14px 28px;border-radius:999px;background:#fff;color:#4f46e5;text-decoration:none;font-weight:700}
+.wrap{max-width:1200px;margin:auto;padding:60px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.card{background:var(--glass);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:30px;transition:.35s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-12px) rotateX(4deg) rotateY(-4deg);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.card:before{content:"";position:absolute;left:-70%;top:-120%;width:50%;height:260%;background:rgba(255,255,255,.25);transform:rotate(25deg);transition:.8s}
 .card:hover:before{left:160%}
-.icon{font-size:60px;margin-bottom:15px}
-.btn{display:inline-block;margin-top:20px;padding:12px 24px;border-radius:999px;background:#fff;color:#4f46e5;text-decoration:none;font-weight:600}
-footer{text-align:center;padding:40px;background:rgba(0,0,0,.25);margin-top:60px}
-.p{position:fixed;border-radius:50%;background:#fff;opacity:.35;z-index:-1;animation:rise linear infinite}
-@keyframes rise{from{transform:translateY(105vh)}to{transform:translateY(-10vh)}}
-</style></head><body>
-<div class="blob b1"></div><div class="blob b2"></div>
-<header><h1>🚀 KunalTheDev Apps</h1><p>Privacy Policies for all Android applications developed by KunalTheDev.</p></header>
-<div class="container"><h2>Available Applications</h2>
+.icon{font-size:3.2rem}
+.btn{display:inline-block;margin-top:18px;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#fff,#dbeafe);color:#4338ca;text-decoration:none;font-weight:600}
+footer{text-align:center;padding:40px;background:rgba(0,0,0,.22);margin-top:60px}
+.p{position:fixed;border-radius:50%;background:#fff;opacity:.25;z-index:-1;animation:r linear infinite}
+@keyframes r{from{transform:translateY(105vh)}to{transform:translateY(-10vh)}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<header>
+<div>
+<h1>🚀 KunalTheDev Apps</h1>
+<p class="lead">Privacy Policies for all Android applications developed by KunalTheDev. Modern, fast, responsive, and designed for a premium experience.</p>
+<a class="hero-btn" href="#apps">Explore Apps</a>
+</div>
+</header>
+
+<section class="wrap" id="apps">
+<h2 style="text-align:center;margin-bottom:30px">Available Applications</h2>
 <div class="grid">
-<div class="card"><div class="icon">🎵</div><h3>LyricFlow</h3><p>An all-in-one lyrics application for discovering, searching, and viewing song lyrics.</p><a class="btn" href="privacy/lyricflow.html">View Privacy Policy</a></div>
-<div class="card"><div class="icon">📱</div><h3>Coming Soon</h3><p>Privacy policy for future applications will appear here.</p><a class="btn" href="#">Coming Soon</a></div>
-<div class="card"><div class="icon">🚀</div><h3>More Apps</h3><p>As new Android apps are released, their privacy policies will be listed here.</p><a class="btn" href="#">Coming Soon</a></div>
-</div></div>
-<footer><h3>KunalTheDev Apps</h3><p>Developer of Android Applications</p><p>© 2026 KunalTheDev Apps. All Rights Reserved.</p></footer>
+<div class="card">
+<div class="icon">🎵</div>
+<h3>LyricFlow</h3>
+<p>An all-in-one lyrics application for discovering, searching, and viewing song lyrics.</p>
+<a class="btn" href="privacy/lyricflow.html">View Privacy Policy</a>
+</div>
+<div class="card">
+<div class="icon">📱</div>
+<h3>Coming Soon</h3>
+<p>Privacy policy for future applications will appear here.</p>
+<a class="btn" href="#">Coming Soon</a>
+</div>
+<div class="card">
+<div class="icon">🚀</div>
+<h3>More Apps</h3>
+<p>As new Android apps are released, their privacy policies will be listed here.</p>
+<a class="btn" href="#">Coming Soon</a>
+</div>
+</div>
+</section>
+
+<footer>
+<h3>KunalTheDev Apps</h3>
+<p>Developer of Android Applications</p>
+<p>© 2026 KunalTheDev Apps. All Rights Reserved.</p>
+</footer>
+
 <script>
-for(let i=0;i<70;i++){const d=document.createElement('div');d.className='p';const s=2+Math.random()*6;d.style.width=s+'px';d.style.height=s+'px';d.style.left=Math.random()*100+'vw';d.style.animationDuration=(8+Math.random()*10)+'s';d.style.animationDelay=Math.random()*8+'s';document.body.appendChild(d);}
+for(let i=0;i<90;i++){
+ const e=document.createElement('div');
+ e.className='p';
+ const s=2+Math.random()*6;
+ e.style.width=e.style.height=s+'px';
+ e.style.left=Math.random()*100+'vw';
+ e.style.animationDuration=(8+Math.random()*12)+'s';
+ e.style.animationDelay=(Math.random()*10)+'s';
+ document.body.appendChild(e);
+}
+document.querySelectorAll('.card').forEach(c=>{
+ c.onmousemove=e=>{
+  const r=c.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;
+  c.style.transform=`perspective(800px) rotateX(${-y/18}deg) rotateY(${x/18}deg) translateY(-8px)`;
+ };
+ c.onmouseleave=()=>c.style.transform='';
+});
 </script>
 </body></html>
